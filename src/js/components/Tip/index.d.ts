@@ -7,6 +7,7 @@ export interface TipProps {
   defaultVisible?: boolean;
   dropProps?: DropType;
   plain?: boolean;
+  disabled?: boolean;
 }
 
 declare const Tip: React.FC<TipProps>;

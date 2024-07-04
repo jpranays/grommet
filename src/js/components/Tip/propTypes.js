@@ -7,6 +7,7 @@ if (process.env.NODE_ENV !== 'production') {
     dropProps: PropTypes.object,
     plain: PropTypes.bool,
     defaultVisible: PropTypes.bool,
+    disabled: PropTypes.bool,
   };
 }
 export const TipPropTypes = PropType;

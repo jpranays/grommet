@@ -1115,6 +1115,7 @@ exports[`Components loads 1`] = `
     "propTypes": {
       "content": [Function],
       "defaultVisible": [Function],
+      "disabled": [Function],
       "dropProps": [Function],
       "plain": [Function],
     },

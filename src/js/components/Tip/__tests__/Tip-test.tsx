@@ -217,4 +217,19 @@ describe('Tip', () => {
     const tooltip = await waitFor(() => screen.getByText('tooltip'));
     expect(tooltip?.parentNode?.parentNode).toMatchSnapshot();
   });
+
+  test(`should be hidden`, async () => {
+    const { getByText } = render(
+      <Grommet>
+        <Tip content="tooltip" disabled>
+          Tooltip won''t be shown
+        </Tip>
+      </Grommet>,
+    );
+
+    fireEvent.mouseOver(getByText('Default Visible'));
+    const tooltip = await waitFor(() => screen.getByText('tooltip'));
+    expect(document.getElementById('tooltip-id')).toBeNull();
+    expect(tooltip?.parentNode?.parentNode).toMatchSnapshot();
+  });
 });
